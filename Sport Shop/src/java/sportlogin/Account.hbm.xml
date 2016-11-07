@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 6, 2016 6:11:57 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sportlogin.Account" table="account" catalog="sport" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="user" type="string">
+            <column name="User" length="20" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="Password" not-null="true" />
+        </property>
+        <property name="sname" type="string">
+            <column name="Sname" length="20" not-null="true" />
+        </property>
+        <property name="ssurname" type="string">
+            <column name="Ssurname" length="20" not-null="true" />
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
